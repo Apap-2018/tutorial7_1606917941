@@ -45,7 +45,7 @@ public class FlightController {
     	return flightService.getAllFlight();
     }
 
-    @DeleteMapping(value = "/delete/{flightId}")
+    @DeleteMapping(value = "/{flightId}")
     private String delete(@PathVariable("flightId") long flightId) {
         flightService.deleteById(flightId);
         return "flight has been deleted";
